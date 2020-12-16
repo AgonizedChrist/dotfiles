@@ -21,6 +21,7 @@ ln -sfn "$cwd"/.config/conky ~/.config/conky
 ln -sfn "$cwd"/.config/mpv ~/.config/mpv
 ln -sfn "$cwd"/.config/mpd ~/.config/mpd
 ln -sfn "$cwd"/.config/ranger ~/.config/ranger
+ln -sfn "$cwd"/.config/dunst ~/.config/dunst
 ln -sfn "$cwd"/.config/gtk-3.0 ~/.config/gtk-3.0
 ln -sfn "$cwd"/.ncmpcpp ~/.ncmpcpp
 
