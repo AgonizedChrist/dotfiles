@@ -171,7 +171,7 @@ super  + {less, greater, question}
 
 ## Tdrop, a drop down terminal to act like a scratchpad. Check scripts
 super + o; {w, p, r}
-	{firefox, pavucontrol, tdrop_c -n 2 kitty -e ranger}
+	{brave, pavucontrol, tdrop_c -n 2 kitty -e ranger}
 
 ## Dropdown
 super + alt + m

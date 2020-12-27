@@ -1,7 +1,7 @@
 #!/bin/sh
 # Applications
 ~/.config/conky/start-conky.sh &
-firefox --class="init_firefox" &
+brave --class="init_brave" &
 
 mpd_start &
 pgrep bspswallow || bspswallow &

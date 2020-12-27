@@ -56,8 +56,7 @@ bspc config normal_border_color \#363836
 
 # Rules
 
-bspc rule -a init_firefox desktop='^2'
-bspc rule -a init_vivaldi desktop='^2'
+bspc rule -a init_brave desktop='^2'
 bspc rule -a discord desktop='^8'
 bspc rule -a feh state='floating'
 bspc rule -a mpv state='floating'
