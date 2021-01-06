@@ -38,4 +38,4 @@ i3lock -n -e                    \
     --wrongsize=45		\
     \
     --indicator			\
-    --color=32302f
+    --color=2c2e34

@@ -1,6 +1,7 @@
 #!/bin/sh
 # Applications
 ~/.config/conky/start-conky.sh &
+pidof redshift || redshift &
 brave --class="init_brave" &
 
 mpd_start &

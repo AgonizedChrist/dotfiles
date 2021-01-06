@@ -12,10 +12,11 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'sainnhe/gruvbox-material'
-Plug 'arcticicestudio/nord-vim'
+Plug 'sainnhe/sonokai'
+Plug 'sainnhe/edge'
+
 Plug 'ryanoasis/vim-devicons'
 
-" Plug 'bagrat/vim-buffet'
 Plug 'godlygeek/tabular'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
@@ -33,11 +34,8 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
-Plug 'cespare/vim-toml'
-Plug 'plasticboy/vim-markdown'
+Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
-
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 call plug#end()
 
 " Behavior
@@ -53,20 +51,29 @@ call plug#end()
 	set wrap linebreak nolist
 	set shortmess+=c
 	nnoremap c "_c
+	set ignorecase
+  set smartcase
 
 " Gruvbox Settings
-	let g:gruvbox_material_background = 'soft'
+	let g:gruvbox_material_background = 'medium'
 	let g:gruvbox_material_transparent_background = 0
 	let g:gruvbox_material_enable_bold = 1
 	let g:gruvbox_material_enable_italic = 1
 
-" Nord Settings
-	let g:nord_uniform_status_lines = 1
-	let g:nord_uniform_diff_background = 1
-	let g:nord_bold = 1
-	let g:nord_italic = 1
-	let g:nord_italic_comments = 1
-	let g:nord_underline = 1
+" Sonokai Settings
+" styles: default, atlantis, andromeda, shusia, maia
+  let g:sonokai_style = 'default'
+	let g:sonokai_enable_italic = 1
+  let g:sonokai_transparent_background = 0
+	let g:sonokai_diagnostic_line_highlight = 1
+
+" Edge Settings
+" styles: default, aura, neon
+  let g:edge_style = 'default'
+	let g:edge_enable_italic = 1
+  let g:edge_transparent_background = 0
+	let g:edge_diagnostic_line_highlight = 1
+
 
 " vim-interface
 	set termguicolors
@@ -75,7 +82,7 @@ call plug#end()
 	set cursorline
 	set number relativenumber
 	set bg=dark
-	colorscheme gruvbox-material
+	colorscheme edge
 	set cmdheight=1
 	set noshowmode
 
@@ -107,8 +114,17 @@ call plug#end()
 " Nerd tree
 	map <leader>n :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+	let g:NERDTreeLimitedSyntax = 1
+  let g:NERDTreeFileExtensionHighlightFullName = 1
+  let g:NERDTreeExactMatchHighlightFullName = 1
+  let g:NERDTreePatternMatchHighlightFullName = 1
+  let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+
 	let NERDTreeMinimalUI = 1
 	let NERDTreeDirArrows = 1
+	let NERDTreeDirArrowExpandable="\u00a0"
+  let NERDTreeDirArrowCollapsible="\u00a0"
+
 
 " TagBar
 	nmap <leader>t :TagbarToggle<CR>
@@ -162,7 +178,7 @@ call plug#end()
 " Lightline
 	let g:lightline = {}
 	let g:lightline.enable = {'statusline': 1,'tabline': 1}
-	let g:lightline.colorscheme = 'gruvbox_material'
+	let g:lightline.colorscheme = 'edge'
 	let g:lightline.active = { 'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ] }
 	let g:lightline.tabline= {'left': [ ['buffers'] ],'right': [ ['close'] ]}
 	let g:lightline.component_raw = {'buffers': 1}

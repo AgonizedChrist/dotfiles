@@ -178,3 +178,12 @@ super + alt + m
 	tdrop -am -w 1000 -h 650 -x 23% -y 17% kitty -e ncmpcpp
 super + shift + Return
 	tdrop -am -w 1000 -h 650 -x 23% -y 17% -n 1 kitty
+
+
+# Remove current tab from tabbed
+super + t; r
+        tabc.sh $(bspc query -N -n focused) remove
+
+# At given direction: join two windows into a new tabbed or add window to an existing tabbed
+super + t; {Left,Down,Up,Right}
+        tabc.sh $(bspc query -N -n {west,south,north,east}) add $(bspc query -N -n focused)

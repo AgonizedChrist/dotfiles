@@ -9,8 +9,8 @@
     separator_height = 0
     padding = 20
     horizontal_padding = 20
-    frame_width = 1
-    frame_color = "#d8dee9"
+    frame_width = 3
+    frame_color = "#555a6d"
     separator_color = frame
     font = Cantarell
     height = 4
@@ -47,18 +47,18 @@
 
 [urgency_low]
 timeout = 4
-background = "#3c3836"
-foreground = "#ebcbb2"
-frame_color = "#928374"
+background = "#2c2e34"
+foreground = "#c5cdd9"
+frame_color = "#555a6d"
 
 [urgency_normal]
 timeout = 8
-background = "#3c3836"
-foreground = "#ebcbb2"
-frame_color = "#928374"
+background = "#2c2e34"
+foreground = "#c5cdd9"
+frame_color = "#555a6d"
 
 [urgency_critical]
 timeout = 0
-background = "#32302f"
-foreground = "#ebcbb2"
+background = "#2c2e34"
+foreground = "#c5cdd9"
 frame_color = "#928374"
