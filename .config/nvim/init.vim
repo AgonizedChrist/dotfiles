@@ -12,6 +12,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/forest-night'
 Plug 'sainnhe/sonokai'
 Plug 'sainnhe/edge'
 
@@ -23,6 +24,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+Plug 'mbbill/undotree'
 
 Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-commentary'
@@ -33,6 +35,7 @@ Plug 'jreybert/vimagit'
 Plug 'vimwiki/vimwiki'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'pechorin/any-jump.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
@@ -76,7 +79,10 @@ call plug#end()
 
 
 " vim-interface
-	set termguicolors
+	set t_Co=256
+	if has('termguicolors')
+		set termguicolors
+	endif
 	set hidden
 	set ruler
 	set cursorline
@@ -219,3 +225,4 @@ call plug#end()
 	noremap <C-t> :tabnew split<CR>
 
 set list lcs=tab:\|\ ""
+nnoremap <F5> :UndotreeToggle<CR>

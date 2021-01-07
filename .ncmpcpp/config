@@ -37,7 +37,7 @@ browser_sort_mode = name
 browser_sort_format = {%a - }{%t}|{%f} {(%l)}
 #song_list_format = "{{%a - %t}|{%f}}{$R%l}"
 # song_columns_list_format = "(10)[white]{l} (30)[white]{b} (25)[cyan]{a} (10)[magenta]{t}"
-song_columns_list_format = "(20)[cyan]{a} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}"
+song_columns_list_format = "(20)[cyan]{a} (50)[white]{t|f:Title} (20)[cyan]{br} (7f)[magenta]{l}"
 
 # execute_on_song_change = notify-send -i "~/music_icon.png" "Now Playing ♫" "$(mpc current)"
 execute_on_song_change = nowplaying
@@ -57,14 +57,15 @@ seek_time = "1"
 
 autocenter_mode = yes
 centered_cursor = yes
-progressbar_look = "▁▁▁"
+progressbar_look = "━━━"
 user_interface = "alternative"
 #
 header_visibility = no
 #
 statusbar_visibility = yes
 #
-titles_visibility = yes
+titles_visibility = no
+
 #
 header_text_scrolling = yes
 #
@@ -84,7 +85,6 @@ display_bitrate = "no"
 search_engine_default_search_mode = 2
 
 external_editor = "/usr/bin/nvim"
-
 use_console_editor = yes
 
  follow_now_playing_lyrics = "yes"
@@ -106,7 +106,6 @@ lines_scrolled = "2"
 ## Other ##
 regular_expressions = "extended"
 
-#progressbar_boldness = "yes"
 #progressbar_elapsed_color = "white"
 
 ##### colors definitions #####
