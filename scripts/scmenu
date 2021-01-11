@@ -61,6 +61,7 @@ function runner() {
 		notify-send "Deletion Link copied"
 	elif [ "$choice" = "Fullscreen" ]
 	then
+		sleep 1
 		maim /tmp/screenshot.png
 		save_clip
 	elif [ "$choice" = "Selection" ]

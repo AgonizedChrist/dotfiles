@@ -25,6 +25,7 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'mbbill/undotree'
+Plug 'pechorin/any-jump.vim'
 
 Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-commentary'
@@ -65,7 +66,7 @@ call plug#end()
 
 " Sonokai Settings
 " styles: default, atlantis, andromeda, shusia, maia
-  let g:sonokai_style = 'default'
+  let g:sonokai_style = 'shusia'
 	let g:sonokai_enable_italic = 1
   let g:sonokai_transparent_background = 0
 	let g:sonokai_diagnostic_line_highlight = 1
@@ -226,3 +227,6 @@ call plug#end()
 
 set list lcs=tab:\|\ ""
 nnoremap <F5> :UndotreeToggle<CR>
+
+" Sudo on files that require root permission
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!

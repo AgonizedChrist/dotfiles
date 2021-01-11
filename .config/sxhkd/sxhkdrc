@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	kitty
+  st -g 90x24
 
 # program launcher
 alt + @space
@@ -151,7 +151,7 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
 	amixer set Master 5%+
 XF86AudioMute
-        amixer set Master toggle
+  amixer set Master toggle
 
 #Brightness control
 XF86MonBrightnessDown
@@ -171,13 +171,13 @@ super  + {less, greater, question}
 
 ## Tdrop, a drop down terminal to act like a scratchpad. Check scripts
 super + o; {w, p, r}
-	{brave, pavucontrol, tdrop_c -n 2 kitty -e ranger}
+	{firefox, pavucontrol, tdrop_c -n 2 st -e ranger}
 
 ## Dropdown
 super + alt + m
-	tdrop -am -w 1000 -h 650 -x 23% -y 17% kitty -e ncmpcpp
+	tdrop -am -w 1000 -h 650 -x 23% -y 17% -n 1 -p 'bspc rule -a St -o state=floating' st -e ncmpcpp
 super + shift + Return
-	tdrop -am -w 1000 -h 650 -x 23% -y 17% -n 1 kitty
+	tdrop -am -w 1000 -h 650 -x 23% -y 17% -p 'bspc rule -a St -o state=floating' st
 
 
 # Remove current tab from tabbed
